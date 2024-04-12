@@ -1,0 +1,16 @@
+
+/* Drawer container */
+.drawer-container {
+    overflow: hidden;
+    /* Hide overflow from the drawer container */
+}
+
+/* Scrollable content */
+.scrollable-content {
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    /* padding-top: 64px; */
+    /* Adjust for the fixed toolbar height */
+    height: calc(100vh - 64px);
+    /* Set height to fill remaining viewport space */
+}

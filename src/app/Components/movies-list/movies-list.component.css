@@ -1,0 +1,29 @@
+.movie-list {
+    /* border: 1px solid; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.small-card {
+    
+  width: 200px;
+  margin: 10px;
+  border: 1px solid;
+}
+
+a{
+    text-decoration: none;
+}
+.link-button{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 1% 5% 1% 5%;
+    background-color:#3f51b5 ;
+    color: white;
+}
+
+.link-button :hover{
+    background-color: #444c7c;
+}
+
+
