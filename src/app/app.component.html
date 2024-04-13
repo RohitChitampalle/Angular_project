@@ -18,22 +18,30 @@
 <mat-drawer-container autosize class="drawer-container">
     <mat-drawer #drawer opened="true" mode="side">
         <mat-nav-list>
-            <mat-list-item>
-                <button mat-button routerLink="/dashboard"><mat-icon>dashboard</mat-icon>Dashboard</button>
-            </mat-list-item>
-            <mat-list-item>
-                <button mat-button routerLink="/add_customer"><mat-icon>add</mat-icon>Add Customer</button>
-            </mat-list-item>
-            <mat-list-item>
-                <button mat-button routerLink="/moviesLists"><mat-icon>account_circle</mat-icon>Users</button>
-            </mat-list-item>
-            <!-- <mat-list-item>
-                <button mat-button routerLink="/details"><mat-icon>portrait</mat-icon>Movie Details</button>
-            </mat-list-item> -->
-            <mat-list-item>
-                <button mat-button routerLink="/analytics"><mat-icon>analytics</mat-icon>Aanalytics</button>
-            </mat-list-item>
+            <mat-nav-list>
+                <mat-list-item>
+                    <button mat-button routerLink="/dashboard"
+                        routerLinkActive="active-link"><mat-icon>dashboard</mat-icon>Dashboard</button>
+                </mat-list-item>
+                <mat-list-item>
+                    <button mat-button routerLink="/add_users" routerLinkActive="active-link"><mat-icon>add</mat-icon>Add
+                        Customer</button>
+                </mat-list-item>
+                <mat-list-item>
+                    <button mat-button routerLink="/users"
+                        routerLinkActive="active-link"><mat-icon>account_circle</mat-icon>Users</button>
+                </mat-list-item>
+                <!-- <mat-list-item>
+                    <button mat-button routerLink="/details" routerLinkActive="active-link"><mat-icon>portrait</mat-icon>Movie Details</button>
+                </mat-list-item> -->
+                <mat-list-item>
+                    <button mat-button routerLink="/analytics"
+                        routerLinkActive="active-link"><mat-icon>analytics</mat-icon>Analytics</button>
+                </mat-list-item>
+            </mat-nav-list>
+
         </mat-nav-list>
+
     </mat-drawer>
     <mat-drawer-content  class="scrollable-content">
         <div style="text-align:center;min-height: 600px;">

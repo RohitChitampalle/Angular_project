@@ -19,7 +19,7 @@ export class DetailsComponent {
   }
 
   goBack(){
-    window.location.assign("/moviesLists")
+    window.location.assign("/users")
   }
 
   getUserDetails(): void {

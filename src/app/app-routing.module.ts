@@ -10,8 +10,8 @@ const routes: Routes = [
 
   {path:'dashboard',component:DashBoardComponent},
   {path:"",redirectTo:"/dashboard",pathMatch:'full'},
-  {path:"moviesLists",component:MoviesListComponent},
-  {path:"add_customer",component:AddCustomersFormComponent},
+  {path:"users",component:MoviesListComponent},
+  {path:"add_users",component:AddCustomersFormComponent},
   { path: "details/:id", component: DetailsComponent },
   { path: "analytics", component: AnalyticsComponent }
 

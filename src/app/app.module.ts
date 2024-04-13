@@ -21,6 +21,7 @@ import { MatCardModule } from '@angular/material/card';
 import { DetailsComponent } from './Components/details/details.component';
 import { AnalyticsComponent } from './Components/analytics/analytics.component';
 import { MatGridListModule } from "@angular/material/grid-list"
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -55,7 +56,9 @@ import { MatGridListModule } from "@angular/material/grid-list"
     MatBadgeModule,
     HttpClientModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()
