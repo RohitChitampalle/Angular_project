@@ -5,52 +5,12 @@
 <button mat-button color="accent">Right Click</button>
 <button mat-raised-button color="primary">Right Click</button> -->
 
-<mat-toolbar color="primary"  class="fixed-toolbar">
-    <mat-toolbar-row>
-        <button (click)="drawer.toggle()" mat-icon-button>
-            <mat-icon>menu</mat-icon>
-        </button>
-        <h1>Navbar</h1>
-    </mat-toolbar-row>
-</mat-toolbar>
 
-
-<mat-drawer-container autosize class="drawer-container">
-    <mat-drawer #drawer opened="true" mode="side">
-        <mat-nav-list>
-            <mat-nav-list>
-                <mat-list-item>
-                    <button mat-button routerLink="/dashboard"
-                        routerLinkActive="active-link"><mat-icon>dashboard</mat-icon>Dashboard</button>
-                </mat-list-item>
-                <mat-list-item>
-                    <button mat-button routerLink="/add_users" routerLinkActive="active-link"><mat-icon>add</mat-icon>Add
-                        Customer</button>
-                </mat-list-item>
-                <mat-list-item>
-                    <button mat-button routerLink="/users"
-                        routerLinkActive="active-link"><mat-icon>account_circle</mat-icon>Users</button>
-                </mat-list-item>
-                <!-- <mat-list-item>
-                    <button mat-button routerLink="/details" routerLinkActive="active-link"><mat-icon>portrait</mat-icon>Movie Details</button>
-                </mat-list-item> -->
-                <mat-list-item>
-                    <button mat-button routerLink="/analytics"
-                        routerLinkActive="active-link"><mat-icon>analytics</mat-icon>Analytics</button>
-                </mat-list-item>
-            </mat-nav-list>
-
-        </mat-nav-list>
-
-    </mat-drawer>
-    <mat-drawer-content  class="scrollable-content">
-        <div style="text-align:center;min-height: 600px;">
-            <h1>Hello 👐</h1>
-            <router-outlet></router-outlet>
-        </div>
-    </mat-drawer-content>
-</mat-drawer-container>
-
+<div style="text-align:center;min-height: 600px;">
+    <!-- <h1>Hello 👐</h1> -->
+    <!-- <app-login></app-login> -->
+    <router-outlet></router-outlet>
+</div>
 <!-- </mat-drawer-content>
 </mat-drawer-container>
 <mat-sidenav-container>

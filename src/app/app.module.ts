@@ -13,6 +13,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete'
 import { MatSelectModule } from '@angular/material/select'
 import { MatInputModule } from '@angular/material/input'
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MoviesListComponent } from './Components/movies-list/movies-list.component';
 import { AddCustomersFormComponent } from './Components/add-customers-form/add-customers-form.component';
 import { DashBoardComponent } from './Components/dash-board/dash-board.component'
@@ -22,6 +23,8 @@ import { DetailsComponent } from './Components/details/details.component';
 import { AnalyticsComponent } from './Components/analytics/analytics.component';
 import { MatGridListModule } from "@angular/material/grid-list"
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './Components/login/login.component';
+import { MainComponent } from './Components/main/main.component';
 
 
 
@@ -39,7 +42,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AddCustomersFormComponent,
     DashBoardComponent,
     DetailsComponent,
-    AnalyticsComponent
+    AnalyticsComponent,
+    LoginComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatGridListModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     provideAnimationsAsync()

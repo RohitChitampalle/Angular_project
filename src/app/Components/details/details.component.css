@@ -58,3 +58,16 @@
      /* Adjust as needed */
      /* This will center the padding horizontally */
  }
+ .spinner {
+     margin: 20px auto;
+     /* Center the spinner */
+ }
+
+ .custom-card {
+     display: none;
+     /* Hide the card initially */
+ }
+
+ .centered-container {
+     text-align: center;
+ }

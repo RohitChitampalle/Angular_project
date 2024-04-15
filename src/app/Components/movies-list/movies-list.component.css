@@ -5,11 +5,26 @@
     justify-content: center;
 }
 .small-card {
-    
-  width: 200px;
-  margin: 10px;
-  border: 1px solid;
+    width: 200px;
+    margin: 10px;
+    border-radius: 8px;
+    /* Optional: Add border radius for rounded corners */
+    overflow: hidden;
+    /* Ensure the image doesn't overflow the card */
+    transition: transform 0.3s ease;
+    /* Add transition for smooth zoom effect */
 }
+
+.small-card:hover {
+    transform: scale(1.1);
+    /* Zoom in when hovering over the card */
+}
+
+/* Ensure the image maintains its aspect ratio */
+.small-card img {
+    width: 100%;
+    height: auto;
+}/* Change box shadow on hover for a subtle effect */
 
 a{
     text-decoration: none;
@@ -27,3 +42,10 @@ a{
 }
 
 
+
+.loading-container{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 10rem;
+    }
