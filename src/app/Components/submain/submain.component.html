@@ -1,0 +1,45 @@
+<mat-toolbar color="primary" class="fixed-toolbar">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+        </button>
+        <h1>Navbar</h1>
+        <span class="spacer"></span> <!-- Add spacer to push logout button to the right -->
+        <button mat-button class="logout-button" (click)="logout()">Logout</button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container autosize class="drawer-container">
+    <mat-drawer #drawer opened="true" mode="side">
+        <mat-nav-list>
+            <mat-list-item *ngIf="role === 'admin' ">
+                <button mat-button routerLink="/dashboard" routerLinkActive="active-link">
+                    <mat-icon>dashboard</mat-icon>Dashboard
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="role === 'admin' ">
+                <button mat-button routerLink="/add_users" routerLinkActive="active-link">
+                    <mat-icon>add</mat-icon>Add Customer
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="role === 'user' || role === 'admin'">
+                <button mat-button routerLink="/users" routerLinkActive="active-link">
+                    <mat-icon>account_circle</mat-icon>Users
+                </button>
+            </mat-list-item>
+            <mat-list-item *ngIf="role === 'user' || role === 'admin'">
+                <button mat-button routerLink="/analytics" routerLinkActive="active-link">
+                    <mat-icon>analytics</mat-icon>Analytics
+                </button>
+            </mat-list-item>
+        </mat-nav-list>
+
+    </mat-drawer>
+    <mat-drawer-content class="scrollable-content">
+        <div style="text-align:center;min-height: 600px;">
+            <!-- <h1>Hello 👐</h1> -->
+            <!-- <app-admin-dashboard></app-admin-dashboard> -->
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
