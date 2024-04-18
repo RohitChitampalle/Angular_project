@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceGithubService } from "../../Services/service-github.service"
+import { ServiceGithubService } from "../../Services/Github/service-github.service"
 import Chart, { Chart as ChartJS, TickOptions, LinearScaleOptions } from 'chart.js/auto';
 // import { Component, OnInit } from '@angular/core';
 import { ProductApiServiceService } from '../../Services/Product/product-api-service.service';
