@@ -5,7 +5,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MainModule } from './Components/main/main.module';
 import { MainComponent } from './Components/main/main.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MainRoutingModule } from './Components/main/main-routing.module.';
+import { MainRoutingModule } from './Components/main/main-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 

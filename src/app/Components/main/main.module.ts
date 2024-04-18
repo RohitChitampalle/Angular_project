@@ -22,7 +22,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from "@angular/material/grid-list"
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../../app-routing.module';
-import { MainRoutingModule } from './main-routing.module.';
+import { MainRoutingModule } from './main-routing.module';
 import { SubmainComponent } from '../submain/submain.component';
 
 

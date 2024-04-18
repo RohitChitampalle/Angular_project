@@ -8,7 +8,7 @@ import { AnalyticsComponent } from './Components/analytics/analytics.component';
 import { AuthGuard } from './auth.guard'; // Import the guard
 import { LoginComponent } from './Components/login/login.component';
 import { MainComponent } from './Components/main/main.component';
-import { MainRoutingModule } from './Components/main/main-routing.module.';
+import { MainRoutingModule } from './Components/main/main-routing.module';
 
 
 const routes: Routes = []

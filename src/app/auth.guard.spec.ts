@@ -1,17 +1,34 @@
 import { TestBed } from '@angular/core/testing';
-import { CanActivateFn } from '@angular/router';
+import { CanActivateFn, Router } from '@angular/router';
+import { of } from 'rxjs';
 
-import { authGuard } from './auth.guard';
+import { AuthGuard } from './auth.guard';
 
-describe('authGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => authGuard(...guardParameters));
+describe('AuthGuard', () => {
+  let authGuard: AuthGuard;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [AuthGuard, Router]
+    });
+    authGuard = TestBed.inject(AuthGuard);
   });
 
   it('should be created', () => {
-    expect(executeGuard).toBeTruthy();
+    expect(authGuard).toBeTruthy();
+  });
+
+  it('should return true if user is authenticated', async () => {
+    spyOn(authGuard, 'canActivate').and.returnValue(await Promise.resolve(true));
+
+    const result = await authGuard.canActivate();
+    expect(result).toBeTrue();
+  });
+
+  it('should return false if user is not authenticated', async () => {
+    spyOn(authGuard, 'canActivate').and.returnValue(await Promise.resolve(false));
+
+    const result = await authGuard.canActivate();
+    expect(result).toBeFalse();
   });
 });

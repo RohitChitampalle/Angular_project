@@ -20,7 +20,8 @@ const routes: Routes = [
         children: [
             { path: 'dashboard', component: DashBoardComponent },
             { path: 'add_users', component: AddCustomersFormComponent },
-            { path: 'users', component: MoviesListComponent },
+            //Lazy loading 
+            { path: 'users', loadChildren:()=> import('../movies-list/movies-list-routing.module').then(m=>m.MoviesRoutingModule) },
             { path: "details/:id", component: DetailsComponent },
             { path: 'analytics', component: AnalyticsComponent },
             // Add other routes as needed
