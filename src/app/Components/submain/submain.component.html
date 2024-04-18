@@ -1,10 +1,10 @@
 <mat-toolbar color="primary" class="fixed-toolbar">
     <mat-toolbar-row>
-        <button mat-icon-button>
-            <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+        <button mat-icon-button (click)="toggleDrawer()"> <!-- Call toggleDrawer() method -->
+            <mat-icon>menu</mat-icon>
         </button>
         <h1>Navbar</h1>
-        <span class="spacer"></span> <!-- Add spacer to push logout button to the right -->
+        <span class="spacer"></span>
         <button mat-button class="logout-button" (click)="logout()">Logout</button>
     </mat-toolbar-row>
 </mat-toolbar>
@@ -35,7 +35,7 @@
         </mat-nav-list>
 
     </mat-drawer>
-    <mat-drawer-content class="scrollable-content">
+    <mat-drawer-content class="scrollable-content" >
         <div style="text-align:center;min-height: 600px;">
             <!-- <h1>Hello 👐</h1> -->
             <!-- <app-admin-dashboard></app-admin-dashboard> -->

@@ -22,7 +22,7 @@ const routes: Routes = [
             { path: 'add_users', component: AddCustomersFormComponent },
             //Lazy loading 
             { path: 'users', loadChildren:()=> import('../movies-list/movies-list-routing.module').then(m=>m.MoviesRoutingModule) },
-            { path: "details/:id", component: DetailsComponent },
+            { path: "details/:id", loadChildren:()=>import('../details/details-routing.module').then(m=>m.DetailsRoutingModule) },
             { path: 'analytics', component: AnalyticsComponent },
             // Add other routes as needed
         ]

@@ -24,7 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../../app-routing.module';
 import { MainRoutingModule } from './main-routing.module';
 import { SubmainComponent } from '../submain/submain.component';
-
+import { MatRippleModule } from '@angular/material/core';
 
 
 
@@ -58,6 +58,7 @@ import { SubmainComponent } from '../submain/submain.component';
     FormsModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
+    MatRippleModule
     
     // AdminDashboardModule
   ],

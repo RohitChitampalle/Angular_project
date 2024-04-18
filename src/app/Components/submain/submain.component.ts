@@ -1,26 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDrawer } from '@angular/material/sidenav'; // Import MatDrawer
+
 
 @Component({
   selector: 'app-submain',
   templateUrl: './submain.component.html',
-  styleUrl: './submain.component.css'
+  styleUrls: ['./submain.component.css']
 })
 export class SubmainComponent implements OnInit {
-  role: string = ''; // Assuming you have a variable to store the user's role
+  @ViewChild('drawer') drawer: MatDrawer | undefined; 
+  role: string = '';
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    // Get user's role from localStorage
     this.role = localStorage.getItem('role') || '';
   }
 
+  toggleDrawer() {
+    this.drawer?.toggle(); 
+  }
 
   logout() {
-    // Clear localStorage
     localStorage.clear();
-    // Navigate to login page
     this.router.navigate(['/login']);
   }
 }
